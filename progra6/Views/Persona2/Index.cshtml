@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form id="frmPersona2">
+    <div class="row">
+        <label for="nombre">nombre<span>(requerido)</span></label>
+        <input type="text" name="nombre" id="nombre" />
+    </div>
+    <div class="row">
+        <label for="apellido">Apellido<span>(requerido)</span></label>
+        <input type="text" name="apellido" id="apellido" />
+    </div>
+    <div class="row">
+        <label for="email">Email<span>(requerido)</span></label>
+        <input type="email" name="email" id="email" />
+    </div>
+    <div class="row">
+        <label for="password1">Password<span>(requerido)</span></label>
+        <input type="password" name="password1" id="password1" />
+    </div>
+    <div class="row">
+        <label for="password2">Confirmar Password<span>(requerido)</span></label>
+        <input type="password" name="password2" id="password2" />
+    </div>
+    <div class="row">
+        <label for="fecha">Fecha Nacimiento<span>(requerido)</span></label>
+        <input type="date" name="fechaN" id="fechaN" />
+    </div>
+    <div class="row">
+        <input type="submit" class="btn btn-success" value="Login" />
+    </div>
+</form>
+
+@section scripts{
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/additional-methods.min.js">
+    </script>
+    <script src="~/Scripts/persona2.js"></script>
+}
+

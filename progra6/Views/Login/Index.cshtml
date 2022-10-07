@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form id="frm">
+    <div class="row">
+        <label for="usuario">Email<span>(requerido)</span></label>
+        <input type="email" name="usuario" required id="usuario" />
+    </div>
+    <div class="row">
+        <label for="password">Password<span>(requerido)</span></label>
+        <input type="password" name="password" id="password" required min="2" max="8" />
+        <input type="submit" class="btn btn-success" value="Login" />
+    </div>
+</form>
+
+@section scripts{
+    <script>
+        debugger;
+        $("#frm").validate();
+    $(document).ready(function () {
+        $("#frm").submit(function (e) {
+            e.preventDefault();
+            url = "@Url.Content("~/Login/Login")"
+            parametros = $(this).serialize();
+
+            $.post(url, parametros, function (data) {
+                if (data == "1") {
+                    document.location.href = "@Url.Content("~/")"
+                } else {
+                    alert(data);
+                }
+            });
+        });
+    });
+    </script>
+}
+
